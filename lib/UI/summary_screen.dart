@@ -67,6 +67,15 @@ class SummaryScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 24),
+
+              //Reset Button
+            ElevatedButton.icon(onPressed: (){
+              context.read<AttendanceProvider>().resetAll();
+              Navigator.pop(context);
+            }, 
+            icon: Icon(Icons.refresh),
+            label:Text('Reset & Go BAck') ),
+           
             ],
           ),
         ),
