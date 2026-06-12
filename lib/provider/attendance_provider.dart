@@ -1,6 +1,5 @@
 import 'package:attendance_tracker_app/model/student_model.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class AttendanceProvider extends ChangeNotifier {
   final List<Student> _students = List.generate(
@@ -22,7 +21,7 @@ class AttendanceProvider extends ChangeNotifier {
       _students.where((s) => !s.isPresent).toList();
 
   //Actions
-  void toggleAttendance(int id, bool value) {
+  void toggleAttendance(int id, bool? value) {
     final student = _students.firstWhere((s) => s.id == id);
     student.isPresent = value ?? false;
     notifyListeners();

@@ -1,6 +1,9 @@
 import 'package:attendance_tracker_app/UI/summary_screen.dart';
+import 'package:attendance_tracker_app/model/student_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+import 'package:attendance_tracker_app/provider/attendance_provider.dart';
 
 class AttendanceScreen extends StatefulWidget {
   const AttendanceScreen({super.key});
@@ -18,15 +21,24 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: ListView.builder(
-          itemCount: 10,
-          itemBuilder: (context, Index) {
-            return Card(
-              child: CheckboxListTile(
-                title: Text('Student-1'),
-                value: false,
-                onChanged: (value) {},
-              ),
+        child: Consumer<AttendanceProvider>(
+          builder: (context, provider, _) {
+            
+            return ListView.builder(
+              itemCount: provider.totalStudents,
+              itemBuilder: (context, index) {
+                final Student student = provider.students[index];
+                return Card(
+                  child: CheckboxListTile(
+                    title: Text('Student-${student.id}'),
+                    subtitle: Text(student.isPresent ? 'Present' : 'Absent'),
+                    value: student.isPresent,
+                    onChanged: (value) {
+                      provider.toggleAttendance(student.id, value);
+                    },
+                  ),
+                );
+              },
             );
           },
         ),
