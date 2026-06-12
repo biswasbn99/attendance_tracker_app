@@ -1,3 +1,4 @@
+import 'package:attendance_tracker_app/UI/summary_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -24,10 +25,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
               child: CheckboxListTile(
                 title: Text('Student-1'),
                 value: false,
-                onChanged: (value) {
-                  
-                },
-               
+                onChanged: (value) {},
               ),
             );
           },
@@ -36,7 +34,16 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SizedBox(
-          child: ElevatedButton(onPressed: () {}, child: Text('Submit')),
+          child: ElevatedButton(
+            onPressed: () {
+              //navigate to summary screen
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SummaryScreen()),
+              );
+            },
+            child: Text('Submit'),
+          ),
         ),
       ),
     );

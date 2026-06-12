@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class AttendanceProvider extends ChangeNotifier {
-  final List<Student> _students = [];
-  List<Student>get students=> _students;
+  final List<Student> _students = List.generate(10, (index)=>Student(id: index+1));
+  
+  
 
 
 
