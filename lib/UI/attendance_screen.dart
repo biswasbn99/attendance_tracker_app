@@ -1,4 +1,5 @@
 import 'package:attendance_tracker_app/UI/summary_screen.dart';
+import 'package:attendance_tracker_app/theme/app_theme.dart';
 import 'package:attendance_tracker_app/model/student_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -17,8 +18,10 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Daily Attendance - $currentDate')),
+      appBar: AppBar(
+        title: Text('Daily Attendance - $currentDate'),
 
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Consumer<AttendanceProvider>(

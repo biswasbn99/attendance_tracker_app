@@ -6,9 +6,10 @@ ThemeData appTheme = ThemeData(
     foregroundColor: Colors.black,
     centerTitle: true,
     titleTextStyle: TextStyle(
-      fontSize: 18,
+      color: Colors.black,
+      fontSize: 20,
       fontWeight: FontWeight.bold,
-      letterSpacing: -0.3,
+      letterSpacing: 0.0,
     ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(

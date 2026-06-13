@@ -1,6 +1,7 @@
 import 'package:attendance_tracker_app/model/summary_model.dart';
 import 'package:attendance_tracker_app/provider/attendance_provider.dart';
 import 'package:attendance_tracker_app/widget/attendance_circle.dart';
+import 'package:attendance_tracker_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -30,18 +31,22 @@ class SummaryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Attendance Summary')),
       body: SingleChildScrollView(
+
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AttendanceCircle(data: presentData),
-                  SizedBox(width: 20),
-                  AttendanceCircle(data: absentData),
-                ],
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AttendanceCircle(data: presentData),
+                    SizedBox(width: 50),
+                    AttendanceCircle(data: absentData),
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               Text(
