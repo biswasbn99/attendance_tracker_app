@@ -8,7 +8,7 @@ class AttendanceCircle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [Text(data.title),
+    return Column(children: [Text(data.title,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
     CircularPercentIndicator(
       radius: 100.0,
                 animation: true,

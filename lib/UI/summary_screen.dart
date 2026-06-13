@@ -46,7 +46,7 @@ class SummaryScreen extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 'List of Present Students',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
               ),
               SizedBox(height: 8),
               ...provider.presentStudents.map(
