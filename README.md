@@ -161,14 +161,25 @@ Install all dependencies via `flutter pub get`
 
 ## Screenshots
 
+## Screenshots
+
+<div align="center">
+
 **Attendance Screen - Daily Marking Interface**
-![Home Screen](https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/home-screen.jpeg)
+
+<img src="https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/home-screen.jpeg" width="300" alt="Home Screen">
 
 **Summary Screen - Attendance Analytics**
-![Summary Screen](https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/summary-screen.jpeg)
+
+<img src="https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/summary-screen.jpeg" width="300" alt="Summary Screen">
 
 **Student List Details**
-![Student List Detail](https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/tudent-list-detail.jpeg)
+
+<img src="https://github.com/biswasbn99/attendance_tracker_app/blob/df49c96504abd956fefc75f50250dbe0a95805ae/tudent-list-detail.jpeg" width="300" alt="Student List Detail">
+
+</div>
+
+
 
 ---
 
