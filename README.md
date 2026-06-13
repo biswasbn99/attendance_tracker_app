@@ -17,6 +17,7 @@ A professional Flutter application for efficiently managing and tracking student
 
 ---
 
+
 ## Project Overview
 
 The Attendance Tracker App is a Flutter-based solution designed to simplify the process of tracking student attendance in educational settings. The application provides an intuitive user interface for marking attendance and generates comprehensive statistical summaries with visual indicators.
